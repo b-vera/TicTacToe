@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lecturaArchivo.c"
-#include "programa.c"
+#include "lecturaArchivo.h"
+#include "programa.h"
 
-int main(int argc, char const *argv[]) {
-  leerArchivo("prueba.txt");
-  return 0;
+int main() {
+    iniciar();
+    return 0;
 }
