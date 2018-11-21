@@ -1,88 +1,74 @@
 #include "lecturaArchivo.h"
 
-void leerArchivo(char * nombreArchivo, Plays * plays) {
-    FILE * fp;
-    char * line = NULL;
+void leerArchivo(char * nombreArchivo, Move*** plays, int * len_array) {
+
+    FILE * file;
     char * pch;
-    size_t len = 0;
-    ssize_t read;
+    char line[100];
 
-    int count;
+    char * instrucction = NULL;
+    char * register_1 = NULL;
+    char * register_2 = NULL;
+    char * number = NULL;
 
-    char * instrucction;
-    char * register_1;
-    char * register_2;
-    char * number;
-
-
-    fp=fopen(nombreArchivo, "r");
-    if (fp == NULL){
+    file = fopen(nombreArchivo, "r");
+    if (file == NULL){
         exit(0);
     }
 
-    while ((read = getline(&line, &len, fp)) != -1) {
+    while (fgets(line, 100, file)) {
 
         pch = strtok (line," ,");
 
         if (strcmp(pch,"addi") == 0 || strcmp(pch,"subi") == 0) {
 
-            while (count < 4) {
-                printf ("entrando a: %s\n",pch);
-                switch(count) {
-                    case 0 :
-                        printf("1...\n");
-                        instrucction = pch;
-                        break;
-                    case 1 :
-                        printf("2...\n");
-                        register_1 = pch;
-                        break;
-                    case 2 :
-                        printf("3...\n");
-                        register_2 = pch;
-                        break;
-                    case 3 :
-                        printf("4...\n");
-                        number = pch;
-                        break;
-                }
-                pch = strtok (NULL, " ,\n");
-                addMoveR(plays,instrucction,register_1,register_2,number);
-                count++;
-            }
+            instrucction = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(instrucction, pch);
 
-        } else if(strcmp(pch,"sw") == 0) {
+            pch = strtok (NULL, " ");
+            register_1 = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(register_1, pch);
 
-            while (count < 3) {
+            pch = strtok (NULL, ", ");
+            register_2 = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(register_2, pch);
 
-                printf ("entrando a: %s\n",pch);
-                switch(count) {
-                    case 0 :
-                        printf("1...\n");
-                        instrucction = pch;
-                        break;
-                    case 1 :
-                        printf("2...\n");
-                        register_1 = pch;
-                        break;
-                    case 2 :
-                        printf("3...\n");
-                        number = pch;
-                        break;
-                }
-                pch = strtok (NULL, " ,\n");
-                addMoveI(plays,instrucction,register_1,number);
-                count++;
-            }
+            pch = strtok (NULL, ", \n");
+            number = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(number, pch);
+
+            (*plays) = (Move**)realloc((*plays),((* len_array)+1)*sizeof(Move*));
+            addMove(plays,instrucction,register_1,register_2,number,len_array);
+            (*len_array) = (*len_array) + 1;
+
         }
-        count = 0;
 
+        else if(strcmp(pch,"sw") == 0) {
+
+            instrucction = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(instrucction, pch);
+
+            pch = strtok (NULL, " ");
+            register_1 = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(register_1, pch);
+
+            pch = strtok (NULL, ", \n");
+            register_2 = (char*)malloc(sizeof(char)*strlen(pch));
+            strcpy(register_2, pch);
+
+            (*plays) = (Move**)realloc((*plays),((* len_array)+1)*sizeof(Move*));
+            addMove(plays,instrucction,register_1,register_2,number,len_array);
+            (*len_array) = (*len_array) + 1;
+        }
 
     }
-    fclose(fp);
 
-    if (line){
-        free(line);
-    }
+    fclose(file);
+
+    free(instrucction);
+    free(register_1);
+    free(register_2);
+    free(number);
+
     return;
 }

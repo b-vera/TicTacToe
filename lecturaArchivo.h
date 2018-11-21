@@ -1,4 +1,4 @@
 #pragma once
 #include "programa.h"
 
-void leerArchivo(char * nombreArchivo, Plays * plays);
+void leerArchivo(char * nombreArchivo, Move*** plays, int* len_array);
