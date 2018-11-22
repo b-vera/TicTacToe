@@ -13,6 +13,7 @@ void leerArchivo(char * nombreArchivo, Move*** plays, int * len_array) {
 
     file = fopen(nombreArchivo, "r");
     if (file == NULL){
+        printf("El archivo '%s' no se encuentra\n", nombreArchivo);
         exit(0);
     }
 
@@ -25,7 +26,7 @@ void leerArchivo(char * nombreArchivo, Move*** plays, int * len_array) {
             instrucction = (char*)malloc(sizeof(char)*strlen(pch));
             strcpy(instrucction, pch);
 
-            pch = strtok (NULL, " ");
+            pch = strtok (NULL, ", ");
             register_1 = (char*)malloc(sizeof(char)*strlen(pch));
             strcpy(register_1, pch);
 
@@ -48,7 +49,7 @@ void leerArchivo(char * nombreArchivo, Move*** plays, int * len_array) {
             instrucction = (char*)malloc(sizeof(char)*strlen(pch));
             strcpy(instrucction, pch);
 
-            pch = strtok (NULL, " ");
+            pch = strtok (NULL, ", ");
             register_1 = (char*)malloc(sizeof(char)*strlen(pch));
             strcpy(register_1, pch);
 

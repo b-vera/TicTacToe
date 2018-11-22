@@ -1,0 +1,6 @@
+
+ O | X | O
+ X | O | X
+ X | O | O
+
+Ganador jugador con registro $s6 (simbolo O)

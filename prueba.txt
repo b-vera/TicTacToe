@@ -3,13 +3,13 @@ addi $s6, $zero, 2 #Jugador con O
 
 addi $sp, $sp, -36 #Arreglo con 9 posiciones posibles
 
-sw $s5, 0($sp) #Guardo X en la posición 1
-sw $s5, 8($sp)
-sw $s5, 16($sp)
-sw $s5, 24($sp)
-sw $s5, 32($sp)
-
-sw $s6, 12($sp) #Guardo O en la posición 4
-sw $s6, 4($sp)
-sw $s6, 20($sp)
+sw $s6, 0($sp) #Guardo X en la posición 1
+sw $s6, 8($sp)
+sw $s6, 16($sp)
+sw $s6, 32($sp)
 sw $s6, 28($sp)
+
+sw $s5, 4($sp) #Guardo O en la posición 4
+sw $s5, 20($sp)
+sw $s5, 24($sp)
+sw $s5, 12($sp)

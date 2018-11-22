@@ -31,186 +31,192 @@ void addMove(Move*** list,char * instr,char * r1,char * r2,char * num, int * len
 
 }
 
-void checkVictory(char** board,char * player){
-    if ( ((strcmp(&board[0][0],&board[0][1]) == 0) && (strcmp(&board[0][1],&board[0][2]) == 0)) ||
-    ((strcmp(&board[1][0],&board[1][1]) == 0) && (strcmp(&board[1][1],&board[1][2]) == 0)) ||
-    ((strcmp(&board[2][0],&board[2][1]) == 0) && (strcmp(&board[2][1],&board[2][2]) == 0)) ||
-    ((strcmp(&board[0][0],&board[1][0]) == 0) && (strcmp(&board[1][0],&board[2][0]) == 0)) ||
-    ((strcmp(&board[0][1],&board[1][1]) == 0) && (strcmp(&board[1][1],&board[2][1]) == 0)) ||
-    ((strcmp(&board[0][2],&board[1][2]) == 0) && (strcmp(&board[1][2],&board[2][2]) == 0)) ||
-    ((strcmp(&board[0][0],&board[1][1]) == 0) && (strcmp(&board[1][1],&board[2][2]) == 0)) ||
-    ((strcmp(&board[2][0],&board[1][1]) == 0) && (strcmp(&board[1][1],&board[0][2]) == 0)) ) {
-        printf("Ganador jugador con registro %s\n",player);
-    } else {
-        printf("Empate\n");
+int checkVictory(char* board, char symbol){
+    if (
+    (board[0] == symbol && board[1] == symbol && board[2] == symbol)
+    ||
+    (board[3] == symbol && board[4] == symbol && board[5] == symbol)
+    ||
+    (board[6] == symbol && board[7] == symbol && board[8] == symbol)
+    ||
+    (board[0] == symbol && board[3] == symbol && board[6] == symbol)
+    ||
+    (board[1] == symbol && board[4] == symbol && board[7] == symbol)
+    ||
+    (board[2] == symbol && board[5] == symbol && board[8] == symbol)
+    ||
+    (board[0] == symbol && board[4] == symbol && board[8] == symbol)
+    ||
+    (board[2] == symbol && board[4] == symbol && board[6] == symbol)
+    )
+    {
+        return 1;
     }
+    return 0;
 }
 
-void printBoard(char** board){
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (j == 2) {
-                printf(" %2C",board[i][j]);
-            } else {
-                printf(" %2C |",board[i][j]);
-            }
+void printBoard(char* board, FILE* output1){
+    fprintf(output1, "\n");
+    for (int i = 1; i < 10; i++) {
+        fprintf(output1, "%2c", board[i-1]);
+        if (i != 3 && i != 6 && i != 9) {
+            fprintf(output1, " |");
         }
-        printf("\n");
+        if (i%3 == 0) {
+            fprintf(output1, "\n");
+        }
     }
 }
 
 void iniciar() {
 
+    // jugadas
     Move** plays = createPlays();
+    // contador jugadas totales
     int len = 0;
-    leerArchivo("Jugadas3.txt", &plays, &len);
+
+    // pipeline
+    int IF  = 0;
+    int ID  = 0;
+    int EX  = 0;
+    int MEM = 0;
+    int WB  = 0;
+
+    // lectura jugadas
+    char nombreArchivo[50];
+    printf("\nIngrese nombre archivo en MIPS (con extension):\n");
+    printf("> ");
+    scanf("%s", nombreArchivo);
+    printf("\n");
+    leerArchivo(nombreArchivo, &plays, &len);
+    //leerArchivo("Jugadas3.txt", &plays, &len);
+
+    // archivos de salida
+    FILE* output1;
+    FILE* output2;
+
+    output1 = fopen("Resultado.txt", "w");
+    output2 = fopen("Etapas.txt", "w");
 
     //registro jugadores
     char* playerO = (char*)malloc(sizeof(char)*3);
     char* playerX = (char*)malloc(sizeof(char)*3);
 
-    int count; //contador de jugadas totales
-
 
     // tablero
-    char **board;
-    board = (char **)malloc (3*sizeof(char *));
-    for (int i=0;i<3;i++)
-        board[i] = (char *) malloc (3*sizeof(char));
+    char *board;
+    board = (char*)malloc (9*sizeof(char));
+    for (int i=0; i<9; i++) {
+        board[i] = '-';
+    }
 
+    //define jugadores
+    strcpy(playerX,plays[0]->register_1);
+    strcpy(playerO,plays[1]->register_1);
 
-    for (int i = 0; i < len; i++) {
-        printf("%s %s %s %s\n", plays[i]->instrucction, plays[i]->register_1, plays[i]->register_2,plays[i]->number);
+    for (int i = 3; i < len; i++) {
+        //revision instrucciones
+        if (strcmp(plays[i]->instrucction,"addi") == 0) {
+            int value = atoi(plays[i]->number);
 
-        //define jugadores
-        if (i == 0) {
-            strcpy(playerO,plays[i]->register_1);
-            printf("player_O= %s\n",playerO );
-        } else if (i == 1) {
-            strcpy(playerX,plays[i]->register_1);
-            printf("player_X= %s\n",playerX );
-
-        } else {
-
-            //revision instrucciones
-            if (strcmp(plays[i]->instrucction,"addi") == 0) {
-                int value = atoi(plays[i]->number);
-
-                char * var = (char*)malloc(sizeof(char));
-                if (strcmp(plays[i]->register_1,playerX)) {
-                    strcpy(var,"X");
-                }else if (strcmp(plays[i]->register_1,playerO)) {
-                    strcpy(var,"O");
+            if (board[value-1] == '-') {
+                if (!strcmp(plays[i]->register_1, playerX)) {
+                    board[value-1] = 'X';
+                }
+                else if (!strcmp(plays[i]->register_1, playerO)) {
+                    board[value-1] = 'O';
                 }
 
-                switch (value) {
-                    case 1:
-                        strcpy(&board[0][0],var);
-                        break;
-                    case 2:
-                        strcpy(&board[0][1],var);
-                        break;
-                    case 3:
-                        strcpy(&board[0][2],var);
-                        break;
-                    case 4:
-                        strcpy(&board[1][0],var);
-                        break;
-                    case 5:
-                        strcpy(&board[1][1],var);
-                        break;
-                    case 6:
-                        strcpy(&board[1][2],var);
-                        break;
-                    case 7:
-                        strcpy(&board[2][0],var);
-                        break;
-                    case 8:
-                        strcpy(&board[2][1],var);
-                        break;
-                    case 9:
-                        strcpy(&board[2][2],var);
-                        break;
-                    default:
-                        break;
-                }
-            } else if (strcmp(plays[i]->instrucction,"subi") == 0) {
-                int value = atoi(plays[i]->number);
-                switch (value) {
-                    case 1:
-                        strcpy(&board[0][0],"0");
-                        break;
-                    case 2:
-                            strcpy(&board[0][1],"0");
-                            break;
-                    case 3:
-                            strcpy(&board[0][2],"0");
-                            break;
-                    case 4:
-                            strcpy(&board[1][0],"0");
-                            break;
-                    case 5:
-                            strcpy(&board[1][1],"0");
-                            break;
-                    case 6:
-                            strcpy(&board[1][2],"0");
-                            break;
-                    case 7:
-                            strcpy(&board[2][0],"0");
-                            break;
-                    case 8:
-                            strcpy(&board[2][1],"0");
-                            break;
-                    case 9:
-                            strcpy(&board[2][2],"0");
-                            break;
-                }
-            } else {
-                int value =atoi(strtok(plays[i]->register_2,"($sp)"));
+                IF ++;
+                ID ++;
+                EX ++;
+                WB ++;
 
-                char * var = (char*)malloc(sizeof(char));
-                if (strcmp(plays[i]->register_1,playerX)) {
-                    strcpy(var,"X");
-                }else if (strcmp(plays[i]->register_1,playerO)) {
-                    strcpy(var,"O");
+            }
+            else {
+                printf("Incompleto addi\n");
+                exit(0);
+            }
+
+        }
+        else if (strcmp(plays[i]->instrucction,"subi") == 0) {
+            int value = atoi(plays[i]->number);
+
+            if (board[value-1] != '-') {
+                if (!strcmp(plays[i]->register_1, playerX)) {
+                    if (board[value-1] != 'O') {
+                        board[value-1] = '-';
+                    }
+                    else {
+                        printf("Incompleto\n");
+                        exit(0);
+                    }
+                }
+                else if (!strcmp(plays[i]->register_1, playerO)) {
+                    if (board[value-1] != 'X') {
+                        board[value-1] = '-';
+                    }
+                    else {
+                        printf("Incompleto\n");
+                        exit(0);
+                    }
                 }
 
-                switch (value) {
-                    case 0:
-                        strcpy(&board[0][0],var);
-                        break;
-                    case 4:
-                        strcpy(&board[0][1],var);
-                        break;
-                    case 8:
-                        strcpy(&board[0][2],var);
-                        break;
-                    case 12:
-                        strcpy(&board[1][0],var);
-                        break;
-                    case 16:
-                        strcpy(&board[1][1],var);
-                        break;
-                    case 20:
-                        strcpy(&board[1][2],var);
-                        break;
-                    case 24:
-                        strcpy(&board[2][0],var);
-                        break;
-                    case 28:
-                        strcpy(&board[2][1],var);
-                        break;
-                    case 32:
-                        strcpy(&board[2][2],var);
-                        break;
-                }
+                IF ++;
+                ID ++;
+                EX ++;
+                WB ++;
+            }
+            else {
+                printf("Incompleto subi\n");
+                exit(0);
             }
         }
+        else {
 
-        printf("\n");
-        printBoard(board);
-        printf("\n");
+            int value =atoi(strtok(plays[i]->register_2,"($sp)"));
 
+            if (board[value/4] == '-') {
+                if (!strcmp(plays[i]->register_1, playerX)) {
+                    board[(value/4)] = 'X';
+                }
+                else if (!strcmp(plays[i]->register_1, playerO)) {
+                    board[(value/4)] = 'O';
+                }
+
+                IF ++;
+                ID ++;
+                EX ++;
+                MEM ++;
+                WB ++;
+            }
+            else {
+                printf("Incompleto sw\n");
+                exit(0);
+            }
+
+        }
     }
-    // printBoard(board);
+
+    printBoard(board, output1);
+    fprintf(output1, "\n");
+
+    // revision resultado
+    if (checkVictory(board, 'X')) {
+        fprintf(output1, "Ganador jugador con registro %s (simbolo X)\n", playerX);
+    }
+    else if (checkVictory(board, 'O')) {
+        fprintf(output1, "Ganador jugador con registro %s (simbolo O)\n", playerO);
+    }
+    else {
+        fprintf(output1, "Empate\n");
+    }
+
+    fprintf(output2, "\nif: %d\nid: %d\nex: %d\nmem: %d\nwb: %d\n", IF, ID, EX, MEM, WB);
+
+    fclose(output1);
+    fclose(output2);
+
+
+
 }
