@@ -72,6 +72,7 @@ void iniciar() {
 
     // jugadas
     Move** plays = createPlays();
+    
     // contador jugadas totales
     int len = 0;
 
@@ -217,6 +218,7 @@ void iniciar() {
     fclose(output1);
     fclose(output2);
 
+    printf("Archivos de salida generados correctamente :)\n");
 
 
 }
