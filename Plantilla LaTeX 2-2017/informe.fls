@@ -1,0 +1,174 @@
+PWD /Users/osx/Documents/USACH/semestre5/Orga/TicTacToe/Plantilla LaTeX 2-2017
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
+INPUT informe.tex
+OUTPUT informe.log
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size12.clo
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/size12.clo
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/inputenc.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/inputenc.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/switch.def
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/arabi/bblopts.cfg
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/babel-spanish/spanish.ldf
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/babel.def
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/babel/txtbabel.def
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/natbib/natbib.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/natbib/natbib.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphicx.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/keyval.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/graphics.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics/trig.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/graphics-def/pdftex.def
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/indentfirst.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/tools/indentfirst.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsmath.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amstext.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amstext.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsgen.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsgen.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsbsy.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsbsy.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsopn.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsmath/amsopn.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amssymb.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/amssymb.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/url/url.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ifpdf.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ifpdf.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ifvtex.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ifvtex.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ifxetex/ifxetex.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/ifxetex/ifxetex.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.cfg
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/geometry/geometry.cfg
+INPUT informe.aux
+INPUT informe.aux
+INPUT chapters/1-introduccion.aux
+INPUT chapters/1-introduccion.aux
+INPUT chapters/2-marcoteorico.aux
+INPUT chapters/2-marcoteorico.aux
+INPUT chapters/3-desarrollo.aux
+INPUT chapters/3-desarrollo.aux
+INPUT chapters/4-experimentos.aux
+INPUT chapters/4-experimentos.aux
+INPUT chapters/5-conclusion.aux
+INPUT chapters/5-conclusion.aux
+OUTPUT informe.aux
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/supp-pdf.mkii
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/context/base/supp-pdf.mkii
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/infwarerr.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/infwarerr.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdiek/grfext.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdiek/grfext.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/kvdefinekeys.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ltxcmds.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdiek/kvoptions.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/oberdiek/kvoptions.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/kvsetkeys.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/etexcmds.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/etexcmds.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ifluatex.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/ifluatex.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/pdftexcmds.sty
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/generic/oberdiek/pdftexcmds.sty
+INPUT images/LogoUsach.pdf
+INPUT ./images/LogoUsach.pdf
+OUTPUT informe.pdf
+INPUT ./images/LogoUsach.pdf
+INPUT ./images/LogoUsach.pdf
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr17.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr8.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr6.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmex10.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/umsa.fd
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/umsa.fd
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/umsb.fd
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/tex/latex/amsfonts/umsb.fd
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/data/pdftex/config/pdftex.map
+INPUT informe.toc
+INPUT informe.toc
+OUTPUT informe.toc
+OUTPUT chapters/1-introduccion.aux
+INPUT chapters/1-introduccion.tex
+INPUT chapters/1-introduccion.tex
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmr12.tfm
+OUTPUT chapters/2-marcoteorico.aux
+INPUT chapters/2-marcoteorico.tex
+INPUT chapters/2-marcoteorico.tex
+OUTPUT chapters/3-desarrollo.aux
+INPUT chapters/3-desarrollo.tex
+INPUT chapters/3-desarrollo.tex
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/tfm/public/cm/cmti12.tfm
+INPUT images/Ejemplo.png
+INPUT ./images/Ejemplo.png
+INPUT ./images/Ejemplo.png
+INPUT ./images/Ejemplo.png
+INPUT ./images/Ejemplo.png
+OUTPUT chapters/4-experimentos.aux
+INPUT chapters/4-experimentos.tex
+INPUT chapters/4-experimentos.tex
+INPUT images/Ejemplo.png
+INPUT ./images/Ejemplo.png
+OUTPUT chapters/5-conclusion.aux
+INPUT chapters/5-conclusion.tex
+INPUT chapters/5-conclusion.tex
+INPUT informe.bbl
+INPUT informe.bbl
+INPUT informe.aux
+INPUT chapters/1-introduccion.aux
+INPUT chapters/1-introduccion.aux
+INPUT chapters/2-marcoteorico.aux
+INPUT chapters/2-marcoteorico.aux
+INPUT chapters/3-desarrollo.aux
+INPUT chapters/3-desarrollo.aux
+INPUT chapters/4-experimentos.aux
+INPUT chapters/4-experimentos.aux
+INPUT chapters/5-conclusion.aux
+INPUT chapters/5-conclusion.aux
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb
+INPUT /Users/osx/Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb
